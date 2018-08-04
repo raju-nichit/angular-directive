@@ -9,13 +9,13 @@
       <ul class="list-group">
         <div *ngIf="onlyOdd">
           <li
-            class="list-group-item" *ngFor="let number of oddNumbers">
+            class="list-group-item" *ngFor="let number of oddNumbers" [ngClass]="{odd:number%2!=0}">
             {{number}}
           </li>
         </div>
         <div *ngIf="!onlyOdd">
           <li
-            class="list-group-item" *ngFor="let number of evenNumbers">
+            class="list-group-item" *ngFor="let number of evenNumbers" [ngClass]="{even:number%2==0}">
             {{number}}
           </li>
         </div>
