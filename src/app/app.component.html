@@ -13,14 +13,22 @@
             {{number}}
           </li>
         </div>
-        <div *ngIf="!onlyOdd">
-          <li
-            class="list-group-item" *ngFor="let number of evenNumbers" [ngClass]="{even:number%2==0}">
-            {{number}}
-          </li>
-        </div>
+        <!--<div *ngIf="!onlyOdd">-->
+          <!--<li-->
+            <!--class="list-group-item" *ngFor="let number of evenNumbers" [ngClass]="{even:number%2==0}">-->
+            <!--{{number}}-->
+          <!--</li>-->
+        <!--</div>-->
       </ul>
+        <ng-template [ngIf]="!onlyOdd">
+          <div >
+            <li
+              class="list-group-item" *ngFor="let number of evenNumbers" [ngClass]="{even:number%2==0}">
+              {{number}}
+            </li>
+          </div>
 
+        </ng-template>
 
       <p appBasicHighlight>Style me with basic directive</p>
       <p appBetterHighlight>Style me with basic directive</p>

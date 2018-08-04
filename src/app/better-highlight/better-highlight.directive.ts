@@ -11,4 +11,13 @@ export class BetterHighlightDirective implements OnInit {
   ngOnInit() {
     this.render.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
   }
+
+  //
+  // @HostListener('mounseenter') mouseover(eventData: Event) {
+  //   this.render.setStyle(this.elRef.nativeElement, 'background-color', 'blue', false);
+  // }
+  //
+  // @HostListener('mounseleave') mouseleave(eventData: Event) {
+  //   this.render.setStyle(this.elRef.nativeElement, 'background-color', 'transprent',false);
+  // }
 }
