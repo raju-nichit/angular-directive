@@ -7,7 +7,14 @@
       </button>
       <br><br>
       <ul class="list-group">
-        <div *ngIf="onlyOdd">
+        <!--<div *ngIf="onlyOdd">-->
+          <!--<li-->
+            <!--class="list-group-item" *ngFor="let number of oddNumbers" [ngClass]="{odd:number%2!=0}">-->
+            <!--{{number}}-->
+          <!--</li>-->
+        <!--</div>-->
+
+        <div *appUnless="!onlyOdd">
           <li
             class="list-group-item" *ngFor="let number of oddNumbers" [ngClass]="{odd:number%2!=0}">
             {{number}}
